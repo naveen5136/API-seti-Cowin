@@ -21,7 +21,12 @@ export default function App() {
         console.log('Error');
       });
   };
-  const handleVerify = () => {};
+  const handleVerify = () => {
+    axios.post('https://cdn-api.co-vin.in/api/v2/auth/public/confirmOTP',{
+      localStorage.getItem('txnId', txnId) 
+      console.log()
+    })
+  };
   return (
     <div>
       Enter you mobile{' '}
